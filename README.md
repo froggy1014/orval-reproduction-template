@@ -2,15 +2,11 @@
 
 Template repository for Orval generation (repro-friendly).
 
-## Requirements
-
-- Bun (recommended) or Node.js with npm/pnpm/yarn
-
 ## Quick start
 
 ```bash
-bun install
-bun run generate
+npm install
+npm run generate
 ```
 
 ## Scripts
