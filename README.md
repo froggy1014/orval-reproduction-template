@@ -1,6 +1,6 @@
-# orval reproduction template
+# orval template repo
 
-Minimal repo to reproduce orval generation issues.
+Template repository for Orval generation (repro-friendly).
 
 ## Requirements
 
@@ -15,18 +15,18 @@ bun run generate
 
 ## Scripts
 
-- `generate`: run orval from `orval.config.ts`
-- `lint`: run eslint
-- `clean`: remove node_modules
+- `generate`: run Orval using `orval.config.ts`
+- `lint`: run ESLint
+- `clean`: remove `node_modules`
 
 ## Project layout
 
-- `orval.config.ts`: orval config
-- `petstore.yaml`: OpenAPI input
-- `src/api/endpoint`: generated endpoints (tags-split)
-- `src/api/model`: generated schemas
+- `orval.config.ts`: Orval configuration (input/output/hooks)
+- `openapi.yaml`: OpenAPI spec source (edit this to change output)
+- `src/`: generated output (ignored, always regenerated)
 
 ## Notes
 
-- `clean: true` in the config clears output folders before generation.
-- If reporting a bug, include versions (orval, bun or node) and exact steps.
+- Keep output paths under `src/` since it is regenerated on each run.
+- Use hooks like `afterAllFilesWrite` if you need formatting steps.
+- When reporting issues, include versions (orval, Bun/Node) and exact steps.
